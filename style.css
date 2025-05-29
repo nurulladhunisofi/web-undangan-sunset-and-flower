@@ -1,0 +1,238 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+iframe {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  /* background: linear-gradient(#cceeff, #004466); */
+  background-color: #ff9a56;
+  color: #fff;
+}
+.great-vibes {
+  font-family: "Great Vibes", cursive;
+  /* font-weight: 400; */
+  font-style: normal;
+}
+.play-fair-display {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.btn-coklat {
+  background-color: #5a3e36;
+  color: white;
+  border-radius: 4px;
+  padding: 5px;
+  text-decoration: none;
+}
+.btn-coklat:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+/* cover */
+.cover-wrapper,
+.canvas {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px 5px #5a3e36;
+}
+.overlay-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #000;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .cover-wrapper {
+    height: 800px;
+    max-width: 450px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .canvas {
+    height: 800px;
+    max-width: 450px;
+    margin: auto;
+    overflow: hidden;
+  }
+  .galery, .hadiah{
+    max-width: 450px;
+    margin: auto;
+    overflow: hidden;
+  }
+}
+/* tutup cover */
+
+/* pembukaan */
+.pembukaan {
+  background-image: url(assets/pattern.png);
+  background-size: cover;
+  padding-top: 70px;
+  color: #4b2e2e;
+}
+.pembukaan .text-center .play-fair-display {
+  -webkit-text-stroke: 0.5px black;
+}
+/* pembukaan */
+
+/* detail-acara */
+.detail-acara {
+  background-image: url(assets/pattern.png);
+  background-size: cover;
+}
+
+.countdown-block {
+  background-color: #ec6f1c;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  width: 70px;
+  text-align: center;
+}
+.time-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.time-label {
+  font-size: 0.9rem;
+}
+/* detail-acara tutup */
+
+/* galery */
+
+.gallery-img {
+  width: 100%;
+  height: auto; /* pastikan height tidak fixed */
+  border-radius: 10px;
+  object-fit: contain; /* atau cover tergantung kebutuhan */
+  display: block;
+}
+.gallery-container {
+  padding: 20px;
+}
+
+/* hidup */
+@keyframes goyangHidup {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+
+.hidup {
+  animation: goyangHidup 3.0s ease-in-out infinite;
+  transform-origin: center;
+  display: inline-block;
+}
+/* hidup */
+
+/* biar bisa dibelakang */
+.bg-galery-1,
+.bg-galery-2 {
+  max-width: 50%;
+  height: auto;
+}
+
+.bg-galery {
+  position: absolute;
+  top: 0;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-galery-1 {
+  left: 0;
+}
+
+.bg-galery-2 {
+  right: 0;
+}
+.bg-galery-3 {
+  top: 500px;
+  left: 0;
+}
+.bg-galery-4 {
+  top: 450px;
+  right: 10;
+}
+
+.gallery-container .row {
+  position: relative;
+  z-index: 1;
+}
+/* biar bisa dibelakang */
+
+/* galery full size */
+/* Gaya untuk thumbnail (opsional jika belum ada) */
+.thumbnail {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Overlay tampilan gambar full */
+#overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+}
+
+
+/* galery full size */
+/* galery tutup */
+
+/* ucapan */
+.ucapan {
+  background-image: url(assets/pattern.png);
+  background-size: cover;
+  padding-top: 70px;
+  color: #4b2e2e;
+  height: 800px;
+  max-width: 450px;
+  margin: auto;
+}
+.komentar{
+  max-height: 395px;
+  overflow: scroll;
+}
