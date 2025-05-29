@@ -80,7 +80,7 @@ body {
     margin: auto;
     overflow: hidden;
   }
-  .galery, .hadiah{
+  .galery, .hadiah,.ucapan{
     max-width: 450px;
     margin: auto;
     overflow: hidden;
@@ -226,11 +226,12 @@ body {
 .ucapan {
   background-image: url(assets/pattern.png);
   background-size: cover;
-  padding-top: 70px;
   color: #4b2e2e;
-  height: 800px;
   max-width: 450px;
   margin: auto;
+  position: relative;
+  height: 100vh;
+  width: 100%;
 }
 .komentar{
   max-height: 395px;
