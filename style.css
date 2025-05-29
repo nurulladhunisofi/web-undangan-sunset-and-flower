@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -80,7 +81,9 @@ body {
     margin: auto;
     overflow: hidden;
   }
-  .galery, .hadiah,.ucapan{
+  .galery,
+  .hadiah,
+  .ucapan {
     max-width: 450px;
     margin: auto;
     overflow: hidden;
@@ -138,14 +141,23 @@ body {
 
 /* hidup */
 @keyframes goyangHidup {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(2deg); }
-  50% { transform: rotate(-2deg); }
-  75% { transform: rotate(2deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
 }
 
 .hidup {
-  animation: goyangHidup 3.0s ease-in-out infinite;
+  animation: goyangHidup 3s ease-in-out infinite;
   transform-origin: center;
   display: inline-block;
 }
@@ -218,7 +230,6 @@ body {
   box-shadow: 0 0 20px white;
 }
 
-
 /* galery full size */
 /* galery tutup */
 
@@ -233,7 +244,7 @@ body {
   height: 100vh;
   width: 100%;
 }
-.komentar{
+.komentar {
   max-height: 395px;
   overflow: scroll;
 }
