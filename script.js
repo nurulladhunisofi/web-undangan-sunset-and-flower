@@ -69,3 +69,41 @@ function closeFullImage() {
   setInterval(fetchKomentar, 5000);
   fetchKomentar();
 
+
+  // import music
+  let player;
+  let isPlaying = false;
+
+  // Load YouTube API Player
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtubeIframe', {
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    const btn = document.getElementById('playPauseBtn');
+    const icon = document.getElementById('playPauseIcon');
+
+    btn.addEventListener('click', () => {
+      if (isPlaying) {
+        player.pauseVideo();
+        icon.classList.remove('fa-pause');
+        icon.classList.add('fa-play');
+      } else {
+        player.playVideo();
+        icon.classList.remove('fa-play');
+        icon.classList.add('fa-pause');
+      }
+      isPlaying = !isPlaying;
+    });
+  }
+
+  // Tampilkan modal saat tombol music diklik
+  document.getElementById('openMusicModal').addEventListener('click', () => {
+    const musicModal = new bootstrap.Modal(document.getElementById('musicModal'));
+    musicModal.show();
+  });
+

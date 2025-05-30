@@ -183,6 +183,45 @@
   </div>
 </section>
 
+<!-- Tombol MUSIC Sidebar -->
+<button id="openMusicModal" class="btn btn-secondary position-fixed" style="top: 50%; right: 0; z-index: 1050; transform: rotate(-90deg);">
+  <i class="fas fa-music"></i> MUSIC
+</button>
+
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <h5 class="modal-title" id="musicModalLabel">Music</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Melepas Lajang</strong></h6>
+        <p class="text-danger small">Beberapa browser tidak mendukung fitur auto play YouTube. Gunakan browser seperti Chrome, Firefox, dsb.</p>
+        
+        <!-- YouTube iframe -->
+        <div class="ratio ratio-16x9 mb-3">
+          <iframe id="youtubeIframe" src="https://www.youtube.com/embed/NiTPKCuEYWw?si=uiWW9VyGes6fhgmm" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+        </div>
+
+        <!-- Tombol kontrol -->
+        <button id="playPauseBtn" class="btn btn-light rounded-circle mb-3" style="width: 50px; height: 50px;">
+          <i id="playPauseIcon" class="fas fa-play"></i>
+        </button>
+        
+        <!-- Tombol tambahan -->
+        <div>
+          <a href="https://youtu.be/NiTPKCuEYWw?si=O_9SLaCCLdLSzUa8" target="_blank" class="btn btn-danger">
+            <i class="fab fa-youtube"></i> Subscribe Channel
+          </a>
+          <button class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ucapan -->
 <section class="ucapan">
   <div class="container">
@@ -201,60 +240,6 @@
     <div class="row mt-4 mb-4 rounded text-dark komentar" style="background-color: rgba(255, 255, 255, 0.7);">
       <!-- <div class="col-12 py-2 m-auto border-bottom border-dark">
         <div class="fs-6">Ucok</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Windah</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Ucok</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Windah</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Ucok</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Windah</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Ucok</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Windah</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Ucok</div>
-        <small>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
-        </small>
-      </div>
-      <div class="col-12 py-2 m-auto border-bottom border-dark">
-        <div class="fs-6">Windah</div>
         <small>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae facilis vel impedit, quas quae cumque aliquam dolorem magnam laborum ipsam, quisquam adipisci tenetur, eveniet odit nostrum illo ea amet culpa?
         </small>
@@ -285,6 +270,9 @@
 
   }, 1000);
 </script>
+
+<!-- Muat YouTube IFrame API -->
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
