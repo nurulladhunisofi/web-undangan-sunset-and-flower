@@ -20,10 +20,10 @@ function disableScroll() {
   // kunci posisi scroll agar tidak bergerak
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-   // 1. Hilangkan tombol musik
-  const button_music = document.getElementById('openMusicModal');
+  // 1. Hilangkan tombol musik
+  const button_music = document.getElementById("openMusicModal");
   if (button_music) {
-    button_music.style.display = 'none';
+    button_music.style.display = "none";
   }
   window.onscroll = function () {
     window.scrollTo(scrollTop, scrollLeft);
@@ -41,30 +41,32 @@ function enableScroll() {
     player.playVideo();
     isPlaying = true;
   }
-      // 1. Hilangkan tombol
-    const button = document.getElementById('bukaUndanganBtn');
-    if (button) {
-      button.style.display = 'none';
-    }
-    
-    // munculkan tombol music
-    const button_music = document.getElementById('openMusicModal');
-    if (button_music) {
-      button_music.style.display = 'block';
-    }
+  // 1. Hilangkan tombol
+  const button = document.getElementById("bukaUndanganBtn");
+  if (button) {
+    button.style.display = "none";
+  }
 
-    // 2. Aktifkan scroll jika sebelumnya dikunci
-    document.body.style.overflow = 'auto';
+  // munculkan tombol music
+  const button_music = document.getElementById("openMusicModal");
+  if (button_music) {
+    button_music.style.display = "block";
+  }
 
-    // 3. Masuk fullscreen (jika diizinkan oleh browser)
-    const elem = document.documentElement;
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-      elem.msRequestFullscreen();
-    }
+  // 2. Aktifkan scroll jika sebelumnya dikunci
+  document.body.style.overflow = "auto";
+
+  // 3. Masuk fullscreen (jika diizinkan oleh browser)
+  const elem = document.documentElement;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }
 
 //–– kode komentar & fetch (sama seperti sebelumya) ––
@@ -133,7 +135,7 @@ let isPlaying = false;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("youtubeIframe", {
-    videoId: "BHfL4ns7-CM", // Ganti dengan ID video Anda
+    videoId: "XQ97zZ2fHRU", // Ganti dengan ID video Anda
     playerVars: {
       autoplay: 0, // jangan autoplay saat page load
       mute: 0,
