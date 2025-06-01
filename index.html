@@ -36,7 +36,7 @@
     <p class="play-fair-display" data-aos="fade-up" data-aos-duration="2000">
       Assalamuallaikum Wr.Wb <br>
       Tanpa mengurangi rasa hormat, kami bermaksud <br>
-      mengundang <span id="guest-name">Bapak/Ibu/Saudara/i</span></p> 
+      mengundang <span class="guest-name">Bapak/Ibu/Saudara/i</span></p> 
       Pada acara resepsi pernikahan:
     </p>
     <p class="fs-1 great-vibes" style="font-weight: 800;" data-aos="fade-up" data-aos-duration="2000">
@@ -245,7 +245,10 @@
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const guest = urlParams.get('to') || 'Tamu Undangan';
-  document.getElementById('guest-name').textContent = decodeURIComponent(guest);
+  // document.getElementById('guest-name').textContent = decodeURIComponent(guest);
+  document.querySelectorAll('#guest-name, .guest-name').forEach(el => {
+    el.textContent = decodeURIComponent(guest);
+  });
 
   const eventDate = new Date('2025-07-20T10:00:00').getTime();
   const countdownEl = document.getElementById('countdown');
