@@ -15,10 +15,6 @@
 </head>
 <body>
 
-<audio autoplay loop hidden>
-  <source src="assets/ocean-love.mp3" type="audio/mp3">
-</audio>
-
 <!-- cover -->
 <div class="cover-wrapper">
     <img src="assets/cover.jpg" alt="Cover" class="cover-image">
@@ -27,10 +23,10 @@
       <h1 class="fw-bold fst-italic fs-3">Ariel & Marina</h1>
       <div class="overlay-box mt-3">
         <p class="mb-0">Kepada Yth.</p>
-        <p class="fw-bold mb-0"><span id="guest-name">Tamu Undangan</p>
+        <p class="fw-bold mb-0"><span id="guest-name">Tamu Undangan</span></p>
         <p class="mb-0">di Tempat</p>
       </div>
-      <a href="#pembukaan" class="btn-coklat play-fair-display" style="color: white;">Buka Undangan <i class="fa-solid fa-envelope"></i></a>
+      <a href="#pembukaan" id="bukaUndanganBtn" class="btn-coklat play-fair-display" style="color: white;" onclick="enableScroll()">Buka Undangan <i class="fa-solid fa-envelope"></i></a>
     </div>    
 </div>
 
@@ -40,7 +36,7 @@
     <p class="play-fair-display" data-aos="fade-up" data-aos-duration="2000">
       Assalamuallaikum Wr.Wb <br>
       Tanpa mengurangi rasa hormat, kami bermaksud <br>
-      mengundang <span id="guest-name">Bapak/Ibu/Saudara/i</p> 
+      mengundang <span id="guest-name">Bapak/Ibu/Saudara/i</span></p> 
       Pada acara resepsi pernikahan:
     </p>
     <p class="fs-1 great-vibes" style="font-weight: 800;" data-aos="fade-up" data-aos-duration="2000">
@@ -193,17 +189,15 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content text-center">
       <div class="modal-header">
-        <h5 class="modal-title" id="musicModalLabel">Music</h5>
+        <h5 class="modal-title text-dark" id="musicModalLabel">Music</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <h6><strong>Melepas Lajang</strong></h6>
+        <h6 class="text-dark"><strong>Anone</strong></h6>
         <p class="text-danger small">Beberapa browser tidak mendukung fitur auto play YouTube. Gunakan browser seperti Chrome, Firefox, dsb.</p>
         
         <!-- YouTube iframe -->
-        <div class="ratio ratio-16x9 mb-3">
-          <iframe id="youtubeIframe" src="https://www.youtube.com/embed/NiTPKCuEYWw?si=uiWW9VyGes6fhgmm" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-        </div>
+        <div id="youtubeIframe" class="ratio ratio-16x9 mb-3"></div>
 
         <!-- Tombol kontrol -->
         <button id="playPauseBtn" class="btn btn-light rounded-circle mb-3" style="width: 50px; height: 50px;">
@@ -212,7 +206,7 @@
         
         <!-- Tombol tambahan -->
         <div>
-          <a href="https://youtu.be/NiTPKCuEYWw?si=O_9SLaCCLdLSzUa8" target="_blank" class="btn btn-danger">
+          <a href="https://youtu.be/BHfL4ns7-CM?si=7aJvAa02lEHJgsjC" target="_blank" class="btn btn-danger">
             <i class="fab fa-youtube"></i> Subscribe Channel
           </a>
           <button class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
@@ -221,7 +215,6 @@
     </div>
   </div>
 </div>
-
 <!-- ucapan -->
 <section class="ucapan">
   <div class="container">

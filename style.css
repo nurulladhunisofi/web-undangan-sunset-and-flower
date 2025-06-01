@@ -245,6 +245,6 @@ body {
   width: 100%;
 }
 .komentar {
-  max-height: 395px;
+  max-height: 450px;
   overflow: scroll;
 }
