@@ -60,16 +60,16 @@ function enableScroll() {
 
 
   // 3. Masuk fullscreen (jika diizinkan oleh browser)
-  const elem = document.documentElement;
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    /* IE11 */
-    elem.msRequestFullscreen();
-  }
+  // const elem = document.documentElement;
+  // if (elem.requestFullscreen) {
+  //   elem.requestFullscreen();
+  // } else if (elem.webkitRequestFullscreen) {
+  //   /* Safari */
+  //   elem.webkitRequestFullscreen();
+  // } else if (elem.msRequestFullscreen) {
+  //   /* IE11 */
+  //   elem.msRequestFullscreen();
+  // }
 }
 
 //–– kode komentar & fetch (sama seperti sebelumya) ––
