@@ -55,6 +55,9 @@ function enableScroll() {
 
   // 2. Aktifkan scroll jika sebelumnya dikunci
   document.body.style.overflow = "auto";
+  document.documentElement.style.overflowX = 'hidden';
+  document.body.style.overflowX = 'hidden';
+
 
   // 3. Masuk fullscreen (jika diizinkan oleh browser)
   const elem = document.documentElement;
