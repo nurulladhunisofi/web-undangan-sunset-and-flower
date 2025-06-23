@@ -69,7 +69,7 @@ body {
 
 @media (min-width: 768px) {
   .cover-wrapper {
-    height: 800px;
+    height: 100vh;
     max-width: 450px;
     margin: auto;
     border-radius: 10px;
